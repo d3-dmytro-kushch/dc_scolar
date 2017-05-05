@@ -1,0 +1,40 @@
+.checkbox-custom {
+  input[type="checkbox"] {
+    opacity: 0;
+    display: none;
+
+    &:checked {
+      &+label {
+        font-weight: bold;
+
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 6px;
+          left: 6px;
+          width: 5px;
+          height: 5px;
+          background: #000;
+        }
+      }
+    }
+  }
+
+  label {
+    padding-left: 20px;
+    position: relative;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      border: 1px solid #000;
+      border-radius: 2px;
+    }
+  }
+}

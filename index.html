@@ -274,6 +274,106 @@
                     </div>
                 </div>
             </div>
+            <h1 class="page-header" id="forms"><a href="#forms"></a>Forms</h1>
+            <div>
+                <h5 class="text-green">Inputs</h5>
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputText">Input type text</label>
+                        <input type="text" class="form-control" id="exampleInputText" placeholder="Text input">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="exampleStickyInputText">
+                        <label for="exampleStickyInputText" class="sticky">Input type text width .sticky label</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputFocus">Input type text in focus state</label>
+                        <input type="text" class="form-control focus" id="exampleInputFocus" placeholder="Text input">
+                    </div>
+                    <div class="form-group">
+                        <label>Input type text in disabled state</label>
+                        <input type="text" class="form-control" placeholder="Text input" disabled="disabled"/>
+                    </div>
+                    <div class="form-group has-success">
+                        <label class="control-label">Input type text with parent .has-success class</label>
+                        <input type="text" class="form-control" placeholder="Text input" />
+                    </div>
+                    <div class="form-group has-error">
+                        <label class="control-label">Input type text with parent .has-error class</label>
+                        <input type="text" class="form-control" placeholder="Text input"/>
+                    </div>
+                    <div class="form-group has-success">
+                        <input type="text" class="form-control" id="exampleInputSuccessSticky"/>
+                        <label for="exampleInputSuccessSticky" class="control-label sticky">Input type text with parent .has-success class</label>
+                    </div>
+                    <div class="form-group has-error">
+                        <input type="text" class="form-control" id="exampleInputErrorSticky"/>
+                        <label for="exampleInputErrorSticky" class="control-label sticky">Input type text with parent .has-error class</label>
+                    </div>
+                </form>
+                <h5 class="text-green">Input sizes</h5>
+                <div class="form-group">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <input type="text" class="form-control input-sm" placeholder="Text input .input-sm"/>
+                            <button type="submit" class="btn btn-default btn-sm">Button .btn-sm</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="form-group">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Text input"/>
+                            <button type="submit" class="btn btn-default">Button .btn-default</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="form-group">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <input type="text" class="form-control input-lg" placeholder="Text input .input-lg"/>
+                            <button type="submit" class="btn btn-default btn-lg">Button .btn-lg</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="form-group">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <input type="text" class="form-control input-lgt" placeholder="Text input .input-lgt"/>
+                        </div>
+                        <button type="submit" class="btn btn-default btn-lgt">Button .btn-lgt</button>
+                    </form>
+                </div>
+                <div>
+                    <h5 class="text-green">Checkboxes</h5>
+                    <form>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value=""> Option one is this and that—be sure to include why it's great
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+                            </label>
+                        </div>
+                    </form>
+                    <form>
+                        <div class="checkbox-custom">
+                            <input type="checkbox" value="" id="customCheckbox">
+                            <label for="customCheckbox">
+                                Option one is this and that—be sure to include why it's great
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </div>
             <h1 class="page-header" id="helper"><a href="#helper"></a>Helper classes</h1>
             <div>
                 <h5 class="text-green">Quick floats</h5>
@@ -320,6 +420,9 @@
                     <a href="#buttons">Buttons</a>
                 </li>
                 <li>
+                    <a href="#forms">Forms</a>
+                </li>
+                <li>
                     <a href="#helper">Helper classes</a>
                 </li>
             </ul>
@@ -331,5 +434,17 @@
         <p class="text-muted">Place sticky footer content here.</p>
     </div>
 </footer>
+<script type="application/javascript">
+    var formInputs = document.querySelectorAll('input.form-control');
+    for (var i=0; i<formInputs.length; i++) {
+        formInputs[i].onkeyup = function(e){
+            if (e.target.value == '') {
+                e.target.className = e.target.className.replace(/ not-empty/g, '');
+            } else if (e.target.className.indexOf('not-empty') == -1) {
+                e.target.className +=' not-empty';
+            }
+        };
+    }
+</script>
 </body>
 </html>
