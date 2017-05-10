@@ -3364,32 +3364,52 @@ select[multiple].input-lgt {
   display: none;
 }
 .checkbox-custom input[type="checkbox"]:checked + label {
-  font-weight: bold;
+  color: #3f4044;
+}
+.checkbox-custom input[type="checkbox"]:checked + label:after {
+  border-color: #3f4044;
 }
 .checkbox-custom input[type="checkbox"]:checked + label:before {
-  content: '';
+  font-family: "iconsfont";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-transform: none;
+  content: '\E002';
   display: block;
   position: absolute;
-  top: 6px;
-  left: 6px;
-  width: 5px;
-  height: 5px;
-  background: #000;
+  top: 2px;
+  left: 2px;
+  width: 12px;
+  height: 12px;
+  font-size: 12px;
+  color: #3f4044;
 }
 .checkbox-custom label {
-  padding-left: 20px;
+  padding-left: 23px;
   position: relative;
+  cursor: pointer;
+  color: #6a6b71;
 }
 .checkbox-custom label:after {
   content: '';
   display: block;
   position: absolute;
-  top: 0;
+  top: 2px;
   left: 0;
   width: 16px;
   height: 16px;
-  border: 1px solid #000;
+  border: 1px solid #afb3b8;
   border-radius: 2px;
+}
+.checkbox-custom label:hover {
+  color: #3f4044;
+}
+.checkbox-custom label:hover:after {
+  border-color: #3f4044;
 }
 .grid_example [class^=col-] {
   padding-top: 10px;
@@ -3678,4 +3698,34 @@ body {
   .hidden-print {
     display: none !important;
   }
+}
+@font-face {
+  font-family: "iconsfont";
+  src: url('icons/fonts/iconsfont.eot');
+  src: url('icons/fonts/iconsfont.eot?#iefix') format('eot'), url('icons/fonts/iconsfont.woff2') format('woff2'), url('icons/fonts/iconsfont.woff') format('woff'), url('icons/fonts/iconsfont.ttf') format('truetype'), url('icons/fonts/iconsfont.svg#iconsfont') format('svg');
+}
+.icon-base-pseudo,
+.icon-arrow-bottom:before,
+.icon-checkbox-checked:before,
+.icon-group-22:before {
+  font-family: "iconsfont";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+.icon-arrow-bottom:before {
+  @index .html: "\E004";
+  content: "\E001";
+}
+.icon-checkbox-checked:before {
+  @index .html: "\E004";
+  content: "\E002";
+}
+.icon-group-22:before {
+  @index .html: "\E004";
+  content: "\E003";
 }

@@ -376,22 +376,12 @@
             </div>
             <h1 class="page-header" id="icons"><a href="#helper"></a>Icons</h1>
             <div class="row" id="icons-list">
-                
+                <% _.each(glyphs, function(glyph) { %>
                 <div class="col-md-2 text-center">
-                    <i class="heading icon icon-arrow-bottom"></i>
-                    <p class="small">icon-arrow-bottom/E001</p>
+                    <i class="heading <%= cssClass %> <%= cssClass %>-<%= glyph.fileName %>"></i>
+                    <p class="small"><%= cssClass %>-<%= glyph.fileName %>/<%= glyph.codePoint %></p>
                 </div>
-                
-                <div class="col-md-2 text-center">
-                    <i class="heading icon icon-checkbox-checked"></i>
-                    <p class="small">icon-checkbox-checked/E002</p>
-                </div>
-                
-                <div class="col-md-2 text-center">
-                    <i class="heading icon icon-group-22"></i>
-                    <p class="small">icon-group-22/E003</p>
-                </div>
-                
+                <% }); %>
             </div>
             <h1 class="page-header" id="helper"><a href="#helper"></a>Helper classes</h1>
             <div>

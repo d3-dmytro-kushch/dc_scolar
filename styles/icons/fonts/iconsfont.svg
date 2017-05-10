@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="no"?> 
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <font id="iconsfont" horiz-adv-x="32">
+    <font-face font-family="iconsfont"
+      units-per-em="32" ascent="32"
+      descent="0" />
+    <missing-glyph horiz-adv-x="0" />
+    <glyph glyph-name="arrow-bottom"
+      unicode="&#xE001;"
+      horiz-adv-x="32" d=" M24.285 20.716L16 12.429L7.715 20.717C7.32 21.112 6.681 21.112 6.286 20.717C5.892 20.322 5.892 19.682 6.286 19.287L15.285 10.285L15.285 10.285L15.285 10.285C15.679 9.89 16.319 9.89 16.713 10.285L25.712 19.287C26.106 19.682 26.106 20.323 25.712 20.718C25.319 21.111 24.679 21.111 24.285 20.716z" />
+    <glyph glyph-name="checkbox-checked"
+      unicode="&#xE002;"
+      horiz-adv-x="32" d=" M11.4293333333333 5.3333333333333L0 16.8506666666667L3.224 20.096L11.4293333333333 11.8506666666667L28.7733333333333 29.3333333333333L32 26.064z" />
+    <glyph glyph-name="group-22"
+      unicode="&#xE003;"
+      horiz-adv-x="32" d=" M16 28A12.020000000000001 12.020000000000001 0 0 1 4 16C4 9.386 9.386 4 16 4S28 9.386 28 16S22.614 28 16 28zM15.69 24.594C15.198 24.594 14.8 24.194 14.8 23.704V15.69C14.8 15.198 15.2 14.8 15.69 14.8H23.11A0.8900000000000001 0.8900000000000001 0 0 1 23.11 16.58H16.58V23.704C16.58 24.194 16.182 24.594 15.69 24.594z" />
+  </font>
+</defs>
+</svg>

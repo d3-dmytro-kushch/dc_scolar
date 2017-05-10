@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "iconsfont";
+  src: url('icons/fonts/iconsfont.eot');
+  src: url('icons/fonts/iconsfont.eot?#iefix') format('eot'),
+  url('icons/fonts/iconsfont.woff2') format('woff2'),
+  url('icons/fonts/iconsfont.woff') format('woff'),
+  url('icons/fonts/iconsfont.ttf') format('truetype'),
+  url('icons/fonts/iconsfont.svg#iconsfont') format('svg');
+}
+
+.icon-base-pseudo {
+                font-family: "iconsfont";
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                font-style: normal;
+                font-variant: normal;
+                font-weight: normal;
+                // speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+                text-decoration: none;
+                text-transform: none;
+              }
+
+.icon-char(@filename) {
+@arrow-bottom: "\E001";
+@checkbox-checked: "\E002";
+@group-22: "\E003";
+@index.html: "\E004";
+
+content: @@filename;
+}
+
+.icon(@filename, @insert: before) {
+  @pseudo-selector: ~":@{insert}";
+
+  &@{pseudo-selector} {
+    &:extend(.icon-base-pseudo);
+    .icon-char(@filename);
+  }
+}
+
+.icon-arrow-bottom {
+.icon(arrow-bottom);
+}
+.icon-checkbox-checked {
+.icon(checkbox-checked);
+}
+.icon-group-22 {
+.icon(group-22);
+}
