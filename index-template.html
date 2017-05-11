@@ -377,9 +377,9 @@
             <h1 class="page-header" id="icons"><a href="#helper"></a>Icons</h1>
             <div class="row" id="icons-list">
                 <% _.each(glyphs, function(glyph) { %>
-                <div class="col-md-2 text-center">
+                <div class="col-md-1 text-center">
                     <i class="heading <%= cssClass %> <%= cssClass %>-<%= glyph.fileName %>"></i>
-                    <p class="small"><%= cssClass %>-<%= glyph.fileName %>/<%= glyph.codePoint %></p>
+                    <p class="small"><%= cssClass %>-<%= glyph.fileName %></p>
                 </div>
                 <% }); %>
             </div>
