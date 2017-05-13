@@ -375,13 +375,19 @@
                 </div>
             </div>
             <h1 class="page-header" id="icons"><a href="#helper"></a>Icons</h1>
-            <div class="row" id="icons-list">
-                <% _.each(glyphs, function(glyph) { %>
-                <div class="col-md-1 text-center">
-                    <i class="heading <%= cssClass %> <%= cssClass %>-<%= glyph.fileName %>"></i>
-                    <p class="small"><%= cssClass %>-<%= glyph.fileName %></p>
+            <div id="icons-list">
+                <div class="row">
+                    <% _.each(glyphs, function(glyph, i) { %>
+                    <div class="col-md-1 text-center">
+                        <i class="heading <%= cssClass %> <%= cssClass %>-<%= glyph.fileName %>"></i>
+                        <p class="small"><%= cssClass %>-<%= glyph.fileName %></p>
+                    </div>
+                    <% if ((i+1)%12 == 0) {%>
                 </div>
-                <% }); %>
+                <div class="row">
+                    <%}%>
+                    <% }); %>
+                </div>
             </div>
             <h1 class="page-header" id="helper"><a href="#helper"></a>Helper classes</h1>
             <div>

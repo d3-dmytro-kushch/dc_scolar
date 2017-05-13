@@ -21,21 +21,28 @@
               }
 
 .icon-char(@filename) {
-@arrow-bottom: "\E001";
-@blind-black-16: "\E002";
-@blind: "\E003";
-@burger-menu: "\E004";
-@checkbox-checked: "\E005";
-@clock: "\E006";
-@contest-finished: "\E007";
-@favorite-filled: "\E008";
-@favorite: "\E009";
-@lock: "\E00A";
-@mail: "\E00B";
-@notification-ring: "\E00C";
-@search-2: "\E00D";
-@search: "\E00E";
-@index.html: "\E00F";
+@E001-checkbox-checked: "\E001";
+@E002-arrow-bottom: "\E002";
+@arrow-left: "\E003";
+@arrow-right: "\E004";
+@blind: "\E005";
+@burger-menu: "\E006";
+@clock: "\E007";
+@comments: "\E008";
+@contest-finished: "\E009";
+@edit: "\E00A";
+@favorite-filled: "\E00B";
+@favorite: "\E00C";
+@fill: "\E00D";
+@group: "\E00E";
+@lock: "\E00F";
+@mail: "\E010";
+@notification-ring: "\E011";
+@prize: "\E012";
+@search: "\E013";
+@settings: "\E014";
+@user: "\E015";
+@index.html: "\E016";
 
 content: @@filename;
 }
@@ -49,11 +56,17 @@ content: @@filename;
   }
 }
 
-.icon-arrow-bottom {
-.icon(arrow-bottom);
+.icon-E001-checkbox-checked {
+.icon(E001-checkbox-checked);
 }
-.icon-blind-black-16 {
-.icon(blind-black-16);
+.icon-E002-arrow-bottom {
+.icon(E002-arrow-bottom);
+}
+.icon-arrow-left {
+.icon(arrow-left);
+}
+.icon-arrow-right {
+.icon(arrow-right);
 }
 .icon-blind {
 .icon(blind);
@@ -61,20 +74,29 @@ content: @@filename;
 .icon-burger-menu {
 .icon(burger-menu);
 }
-.icon-checkbox-checked {
-.icon(checkbox-checked);
-}
 .icon-clock {
 .icon(clock);
 }
+.icon-comments {
+.icon(comments);
+}
 .icon-contest-finished {
 .icon(contest-finished);
+}
+.icon-edit {
+.icon(edit);
 }
 .icon-favorite-filled {
 .icon(favorite-filled);
 }
 .icon-favorite {
 .icon(favorite);
+}
+.icon-fill {
+.icon(fill);
+}
+.icon-group {
+.icon(group);
 }
 .icon-lock {
 .icon(lock);
@@ -85,9 +107,15 @@ content: @@filename;
 .icon-notification-ring {
 .icon(notification-ring);
 }
-.icon-search-2 {
-.icon(search-2);
+.icon-prize {
+.icon(prize);
 }
 .icon-search {
 .icon(search);
+}
+.icon-settings {
+.icon(settings);
+}
+.icon-user {
+.icon(user);
 }

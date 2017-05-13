@@ -10,6 +10,8 @@
 
 // Include gulp
 var gulp = require('gulp');
+var del = require('del');
+var runSequence = require('run-sequence');
 
 var iconfont = require('gulp-iconfont');
 var iconfontCss = require('gulp-iconfont-css');
@@ -21,23 +23,39 @@ gulp.task('iconfont', function () {
     gulp.src(['icons/*.svg'])
         .pipe(iconfontTemplate({
             fontName: fontName,
+            prependUnicode: true,
             path: '../index-template.html',
             targetPath: '../../../index.html',
             fontPath: './icons/fonts/'
         }))
         .pipe(iconfontCss({
             fontName: fontName,
-            normalize: true,
-            fontHeight: 300,
+            fixedCodepoints: true,
             path: 'icons/template-less/_icons.less',
             targetPath: '../generated-less/' + fontName + '.less',
             fontPath: 'icons/fonts/'
         }))
         .pipe(iconfont({
             fontName: fontName,
+            startUnicode: 0xE001,
             prependUnicode: true,
+            appendCodepoints: true,
             normalize: true,
+            fontHeight: 1001,
+            centerHorizontally: true,
             formats: ['svg', 'ttf', 'eot', 'woff', 'woff2']
         }))
         .pipe(gulp.dest('icons/fonts/'));
 });
+
+gulp.task('clean-icons', function(){
+    return del(['./icons/fonts/', './icons/generated-less/']);
+});
+
+gulp.task('icons', function(){
+    runSequence('clean-icons', ['iconfont']);
+});
+//
+// gulp.task('watch', function() {
+//     gulp.watch(['/','./icons/'], ['icons']);
+// });
