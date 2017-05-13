@@ -24,8 +24,8 @@ gulp.task('iconfont', function () {
         .pipe(iconfontTemplate({
             fontName: fontName,
             prependUnicode: true,
-            path: '../index-template.html',
-            targetPath: '../../../index.html',
+            path: '../typography/index-template.html',
+            targetPath: '../../../typography/index.html',
             fontPath: './icons/fonts/'
         }))
         .pipe(iconfontCss({
