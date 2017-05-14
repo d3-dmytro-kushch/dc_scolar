@@ -1,0 +1,121 @@
+@font-face {
+  font-family: "iconsfont";
+  src: url('icons/fonts/iconsfont.eot');
+  src: url('icons/fonts/iconsfont.eot?#iefix') format('eot'),
+  url('icons/fonts/iconsfont.woff2') format('woff2'),
+  url('icons/fonts/iconsfont.woff') format('woff'),
+  url('icons/fonts/iconsfont.ttf') format('truetype'),
+  url('icons/fonts/iconsfont.svg#iconsfont') format('svg');
+}
+
+.icon-base-pseudo {
+                font-family: "iconsfont";
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                font-style: normal;
+                font-variant: normal;
+                font-weight: normal;
+                // speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+                text-decoration: none;
+                text-transform: none;
+              }
+
+.icon-char(@filename) {
+@E001-checkbox-checked: "\E001";
+@E002-arrow-bottom: "\E002";
+@arrow-left: "\E003";
+@arrow-right: "\E004";
+@blind: "\E005";
+@burger-menu: "\E006";
+@clock: "\E007";
+@comments: "\E008";
+@contest-finished: "\E009";
+@edit: "\E00A";
+@favorite-filled: "\E00B";
+@favorite: "\E00C";
+@fill: "\E00D";
+@group: "\E00E";
+@lock: "\E00F";
+@mail: "\E010";
+@notification-ring: "\E011";
+@prize: "\E012";
+@search: "\E013";
+@settings: "\E014";
+@user: "\E015";
+@index.html: "\E016";
+
+content: @@filename;
+}
+
+.icon(@filename, @insert: before) {
+  @pseudo-selector: ~":@{insert}";
+
+  &@{pseudo-selector} {
+    &:extend(.icon-base-pseudo);
+    .icon-char(@filename);
+  }
+}
+
+.icon-E001-checkbox-checked {
+.icon(E001-checkbox-checked);
+}
+.icon-E002-arrow-bottom {
+.icon(E002-arrow-bottom);
+}
+.icon-arrow-left {
+.icon(arrow-left);
+}
+.icon-arrow-right {
+.icon(arrow-right);
+}
+.icon-blind {
+.icon(blind);
+}
+.icon-burger-menu {
+.icon(burger-menu);
+}
+.icon-clock {
+.icon(clock);
+}
+.icon-comments {
+.icon(comments);
+}
+.icon-contest-finished {
+.icon(contest-finished);
+}
+.icon-edit {
+.icon(edit);
+}
+.icon-favorite-filled {
+.icon(favorite-filled);
+}
+.icon-favorite {
+.icon(favorite);
+}
+.icon-fill {
+.icon(fill);
+}
+.icon-group {
+.icon(group);
+}
+.icon-lock {
+.icon(lock);
+}
+.icon-mail {
+.icon(mail);
+}
+.icon-notification-ring {
+.icon(notification-ring);
+}
+.icon-prize {
+.icon(prize);
+}
+.icon-search {
+.icon(search);
+}
+.icon-settings {
+.icon(settings);
+}
+.icon-user {
+.icon(user);
+}

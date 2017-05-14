@@ -1,0 +1,120 @@
+@font-face {
+  font-family: "iconsfont";
+  src: url('icons/fonts/iconsfont.eot');
+  src: url('icons/fonts/iconsfont.eot?#iefix') format('eot'), url('icons/fonts/iconsfont.woff2') format('woff2'), url('icons/fonts/iconsfont.woff') format('woff'), url('icons/fonts/iconsfont.ttf') format('truetype'), url('icons/fonts/iconsfont.svg#iconsfont') format('svg');
+}
+.icon-base-pseudo,
+.icon-E001-checkbox-checked:before,
+.icon-E002-arrow-bottom:before,
+.icon-arrow-left:before,
+.icon-arrow-right:before,
+.icon-blind:before,
+.icon-burger-menu:before,
+.icon-clock:before,
+.icon-comments:before,
+.icon-contest-finished:before,
+.icon-edit:before,
+.icon-favorite-filled:before,
+.icon-favorite:before,
+.icon-fill:before,
+.icon-group:before,
+.icon-lock:before,
+.icon-mail:before,
+.icon-notification-ring:before,
+.icon-prize:before,
+.icon-search:before,
+.icon-settings:before,
+.icon-user:before {
+  font-family: "iconsfont";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+.icon-E001-checkbox-checked:before {
+  @index .html: "\E016";
+  content: "\E001";
+}
+.icon-E002-arrow-bottom:before {
+  @index .html: "\E016";
+  content: "\E002";
+}
+.icon-arrow-left:before {
+  @index .html: "\E016";
+  content: "\E003";
+}
+.icon-arrow-right:before {
+  @index .html: "\E016";
+  content: "\E004";
+}
+.icon-blind:before {
+  @index .html: "\E016";
+  content: "\E005";
+}
+.icon-burger-menu:before {
+  @index .html: "\E016";
+  content: "\E006";
+}
+.icon-clock:before {
+  @index .html: "\E016";
+  content: "\E007";
+}
+.icon-comments:before {
+  @index .html: "\E016";
+  content: "\E008";
+}
+.icon-contest-finished:before {
+  @index .html: "\E016";
+  content: "\E009";
+}
+.icon-edit:before {
+  @index .html: "\E016";
+  content: "\E00A";
+}
+.icon-favorite-filled:before {
+  @index .html: "\E016";
+  content: "\E00B";
+}
+.icon-favorite:before {
+  @index .html: "\E016";
+  content: "\E00C";
+}
+.icon-fill:before {
+  @index .html: "\E016";
+  content: "\E00D";
+}
+.icon-group:before {
+  @index .html: "\E016";
+  content: "\E00E";
+}
+.icon-lock:before {
+  @index .html: "\E016";
+  content: "\E00F";
+}
+.icon-mail:before {
+  @index .html: "\E016";
+  content: "\E010";
+}
+.icon-notification-ring:before {
+  @index .html: "\E016";
+  content: "\E011";
+}
+.icon-prize:before {
+  @index .html: "\E016";
+  content: "\E012";
+}
+.icon-search:before {
+  @index .html: "\E016";
+  content: "\E013";
+}
+.icon-settings:before {
+  @index .html: "\E016";
+  content: "\E014";
+}
+.icon-user:before {
+  @index .html: "\E016";
+  content: "\E015";
+}
