@@ -9,6 +9,6 @@ describe('dc-site App', () => {
 
   it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('app works! - Angular Hello world');
   });
 });

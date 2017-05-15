@@ -1,13 +1,24 @@
 import { TestBed, async } from '@angular/core/testing';
+import { RouterModule } from '@angular/router';
+import { SharedModule } from './shared/shared.module';
+import {APP_BASE_HREF} from '@angular/common';
+
+import { appRouting } from './app.routing';
 
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [
+          RouterModule,
+          SharedModule,
+          appRouting
+      ],
       declarations: [
         AppComponent
       ],
+      providers: [{provide: APP_BASE_HREF, useValue : '/' }],
     }).compileComponents();
   }));
 
@@ -27,6 +38,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('app works!');
+    expect(compiled.querySelector('h1').textContent).toContain('app works! - Angular Hello world');
   }));
 });
